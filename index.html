@@ -1,0 +1,108 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+<title>Train Scheduler</title>
+
+<style>
+    #employee-table th,
+    td {
+            display: inline-block;
+            width: 16.575%;
+        }
+</style>
+
+</head>
+
+<body>
+
+    <div class="jumbotron jumbotron-fluid" style="background-color: teal; color: white">
+        <div class="container">
+          <h1 class="text-center">Ticket to Ride</h1>
+          <p class="text-center">Hope you bought your ticket because these trains leaving!</p>
+        </div>
+    </div>
+
+    <div class="card text-center">
+        <div class="card-header">
+          <ul class="nav nav-pills card-header-pills">
+            Current Train Schedule
+            
+            <!-- <li class="nav-item">
+              <a class="nav-link active" href="#">Current Train Schedule</a>
+            </li> -->
+          </ul>
+        </div>
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+                  <div class="col-sm">
+                    Train Name
+                  </div>
+                  <div class="col-sm">
+                    Destination
+                  </div>
+                  <div class="col-sm">
+                    Frequency (min)
+                  </div>
+                  <div class="col-sm">
+                    Next Arrival
+                  </div>
+                  <div class="col-sm">
+                    Minutes Away
+                  </div>
+                </div>
+            </div>
+
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Add Employee  -->
+          <div class="card mb-4">
+            <div class="card-header">Add Train</div>
+            <div class="card-body">
+  
+              <!-- Entry Form -->
+              <form>
+                <div class="form-group">
+                  <label for="train-name-input">Train Name</label>
+                  <input class="form-control" id="train-name-input" placeholder="Thomas the Thank Engine" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="route-input">Destination</label>
+                  <input class="form-control" id="route-input" placeholder="Never Neverland" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="start-input">First Train Time (HH:mm - military time)</label>
+                  <input class="form-control" id="start-input" placeholder="06:00" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="frequency-input">Frequency (minutes)</label>
+                  <input class="form-control" id="frequency-input" placeholder="10" type="text">
+                </div>
+                <button class="btn btn-primary float-right" id="add-train-btn">Submit</button>
+              </form>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>
